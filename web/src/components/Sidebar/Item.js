@@ -24,7 +24,7 @@ function Item({icon,name}) {
         cursor: 'pointer'
     }}
     transition={{
-        type: 'none', duration: 0.1,
+        type: 'none', duration: 0.4,
     }}
         className='item'>
         <motion.div 
@@ -40,4 +40,4 @@ function Item({icon,name}) {
   )
 }
 
-export default Item
+export default Item;

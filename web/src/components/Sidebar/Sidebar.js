@@ -2,11 +2,10 @@ import "../Sidebar/Sidebar.css"
 import TocRoundedIcon from '@mui/icons-material/TocRounded';
 import DashboardRoundedIcon from '@mui/icons-material/DashboardRounded';
 import SmartToyRoundedIcon from '@mui/icons-material/SmartToyRounded';
-import BarChartRoundedIcon from '@mui/icons-material/BarChartRounded';
 import AttachMoneyRoundedIcon from '@mui/icons-material/AttachMoneyRounded';
 import Diversity3RoundedIcon from '@mui/icons-material/Diversity3Rounded';
 import AddchartRoundedIcon from '@mui/icons-material/AddchartRounded';
-import ColorLensRoundedIcon from '@mui/icons-material/ColorLensRounded';
+import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
 import Item from "./Item";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -26,7 +25,7 @@ function Sidebar() {
     },
     false: {
       transition: {
-        delay: 0.2,
+        delay: 0.6
       },
     },
   };
@@ -34,9 +33,9 @@ function Sidebar() {
   const sidebarVariants = {
     true: {},
     false: {
-      width: '5rem',
+      width: '4.5rem',
       transition:{
-        delay: 0.2,
+        delay: 0.4
       },
     },
   };
@@ -44,7 +43,7 @@ function Sidebar() {
   const profileVariants = {
     true: {
       alignSelf: 'center',
-      width: '8rem'
+      width: '10rem'
     },
     false:{
       alignSelf: 'flex-start',
@@ -69,7 +68,7 @@ function Sidebar() {
             {/* Start Lines */}
             <motion.div whileHover={{scale:1.2, rotate:180, backgroundColor:"rgba(255, 255, 255, 0.3)",
             backdropFilter:"blur(3.5px)",WebkitBackdropFilter:"blur(3.5px)", border:"1px solid rgba(255,255,255, 0.18)",
-            transition:{delay:0.25, duration:0.2} }} onClick={HandleToogle} className="lines_icon">
+            transition:{delay:0.2, duration:0.4,} }} onClick={HandleToogle} className="lines_icon">
               <TocRoundedIcon/>
             </motion.div>
             {/* End Lines */}
@@ -114,12 +113,35 @@ function Sidebar() {
               <div className="group">
                 <motion.h3 animate={{opacity: open ? 1 : 0, height: open? 'auto': 0}}>
                   CUSTOMIZATION</motion.h3>
-                <Item icon={<ColorLensRoundedIcon/>} name='Log out'/>
+                <Item icon={<LogoutRoundedIcon/>} name='Log out'/>
               </div>
             </div>
             {/* End groups */}
           </motion.div>
         </motion.div>
+          <div className="body_container">
+          {/* <hr />i am body
+          <hr />i am body
+          <hr />i am body
+          <hr />i am body
+          <hr />i am body
+          <hr />i am body
+          <hr />i am body
+          <hr />i am body
+          <hr />i am body
+          <hr />i am body
+          <hr />i am body
+          <hr />i am body
+          <hr />i am body
+          <hr />i am body
+          <hr />i am body
+          <hr />i am body
+          <hr />i am body
+          <hr />i am body
+          <hr />i am body
+          <hr />i am body
+          <hr /> */}
+        </div>
       </div>
   );
 }
